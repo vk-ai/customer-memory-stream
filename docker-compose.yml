@@ -1,0 +1,15 @@
+# Local stack: Redpanda (Kafka API) + the API with its consumer.
+# NOTE: written for convenience; the author's box had no Docker, so this file was
+# not run. CI exercises the same code path against an apache/kafka service container.
+services:
+  redpanda:
+    image: redpandadata/redpanda:v24.2.7
+    command: [redpanda, start, --overprovisioned, --smp, "1", --memory, 512M, --mode, dev-container,
+              --kafka-addr, "PLAINTEXT://0.0.0.0:9092", --advertise-kafka-addr, "PLAINTEXT://redpanda:9092"]
+    ports: ["9092:9092"]
+  api:
+    build: .
+    environment:
+      KAFKA_BOOTSTRAP: redpanda:9092
+    ports: ["8000:8000"]
+    depends_on: [redpanda]

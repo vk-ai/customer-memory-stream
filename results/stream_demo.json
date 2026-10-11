@@ -1,0 +1,13 @@
+{
+  "broker": "localhost:9092",
+  "events": 6038,
+  "stored": 6038,
+  "bad_messages_dropped": 1,
+  "publish_s": 0.72,
+  "publish_start_to_all_indexed_s": 0.87,
+  "events_per_s_ingest": 6919,
+  "broker_to_store_lag_ms_p50": 442.5,
+  "broker_to_store_lag_ms_p95": 560.6,
+  "sample_query": "What is the order number we are discussing?",
+  "sample_top_hit": "The order in question is C-1185."
+}

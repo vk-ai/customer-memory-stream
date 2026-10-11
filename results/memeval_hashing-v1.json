@@ -1,0 +1,102 @@
+{
+  "_meta": {
+    "customers": 200,
+    "events": 12065,
+    "questions": 800,
+    "updated_facts": 318,
+    "seed": 0,
+    "embedder": "hashing-v1"
+  },
+  "last-5-turns (no retrieval)": {
+    "hit@1": {
+      "value": 0.006,
+      "ci95": [
+        0.003,
+        0.015
+      ]
+    },
+    "hit@3": {
+      "value": 0.031,
+      "ci95": [
+        0.021,
+        0.046
+      ]
+    },
+    "stale@1_on_updated_facts": {
+      "value": 0.0,
+      "ci95": [
+        -0.0,
+        0.012
+      ]
+    }
+  },
+  "cosine retrieval": {
+    "hit@1": {
+      "value": 0.376,
+      "ci95": [
+        0.343,
+        0.41
+      ]
+    },
+    "hit@3": {
+      "value": 0.505,
+      "ci95": [
+        0.47,
+        0.54
+      ]
+    },
+    "stale@1_on_updated_facts": {
+      "value": 0.299,
+      "ci95": [
+        0.251,
+        0.351
+      ]
+    }
+  },
+  "cosine + recency (w=0.15)": {
+    "hit@1": {
+      "value": 0.305,
+      "ci95": [
+        0.274,
+        0.338
+      ]
+    },
+    "hit@3": {
+      "value": 0.409,
+      "ci95": [
+        0.375,
+        0.443
+      ]
+    },
+    "stale@1_on_updated_facts": {
+      "value": 0.157,
+      "ci95": [
+        0.121,
+        0.201
+      ]
+    }
+  },
+  "cosine top-10 -> newest among near-ties": {
+    "hit@1": {
+      "value": 0.394,
+      "ci95": [
+        0.36,
+        0.428
+      ]
+    },
+    "hit@3": {
+      "value": 0.482,
+      "ci95": [
+        0.448,
+        0.517
+      ]
+    },
+    "stale@1_on_updated_facts": {
+      "value": 0.189,
+      "ci95": [
+        0.149,
+        0.235
+      ]
+    }
+  }
+}

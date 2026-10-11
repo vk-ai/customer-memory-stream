@@ -1,0 +1,9 @@
+{
+  "n_test": 10000,
+  "pehe": 0.09767267841963839,
+  "corr_pred_true_uplift": 0.6445659095561591,
+  "true_ate": 0.07741569196595167,
+  "observed_uplift_top20pct": 0.18138642067557526,
+  "observed_uplift_all": 0.07179514134062187,
+  "true_uplift_top20pct": 0.17295702970490628
+}

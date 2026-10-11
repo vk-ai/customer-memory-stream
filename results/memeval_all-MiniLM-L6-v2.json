@@ -1,0 +1,102 @@
+{
+  "_meta": {
+    "customers": 200,
+    "events": 12065,
+    "questions": 800,
+    "updated_facts": 318,
+    "seed": 0,
+    "embedder": "all-MiniLM-L6-v2"
+  },
+  "last-5-turns (no retrieval)": {
+    "hit@1": {
+      "value": 0.006,
+      "ci95": [
+        0.003,
+        0.015
+      ]
+    },
+    "hit@3": {
+      "value": 0.031,
+      "ci95": [
+        0.021,
+        0.046
+      ]
+    },
+    "stale@1_on_updated_facts": {
+      "value": 0.0,
+      "ci95": [
+        -0.0,
+        0.012
+      ]
+    }
+  },
+  "cosine retrieval": {
+    "hit@1": {
+      "value": 0.545,
+      "ci95": [
+        0.51,
+        0.579
+      ]
+    },
+    "hit@3": {
+      "value": 0.695,
+      "ci95": [
+        0.662,
+        0.726
+      ]
+    },
+    "stale@1_on_updated_facts": {
+      "value": 0.355,
+      "ci95": [
+        0.305,
+        0.409
+      ]
+    }
+  },
+  "cosine + recency (w=0.15)": {
+    "hit@1": {
+      "value": 0.554,
+      "ci95": [
+        0.519,
+        0.588
+      ]
+    },
+    "hit@3": {
+      "value": 0.661,
+      "ci95": [
+        0.628,
+        0.693
+      ]
+    },
+    "stale@1_on_updated_facts": {
+      "value": 0.223,
+      "ci95": [
+        0.181,
+        0.272
+      ]
+    }
+  },
+  "cosine top-10 -> newest among near-ties": {
+    "hit@1": {
+      "value": 0.589,
+      "ci95": [
+        0.554,
+        0.622
+      ]
+    },
+    "hit@3": {
+      "value": 0.682,
+      "ci95": [
+        0.649,
+        0.714
+      ]
+    },
+    "stale@1_on_updated_facts": {
+      "value": 0.198,
+      "ci95": [
+        0.158,
+        0.245
+      ]
+    }
+  }
+}
